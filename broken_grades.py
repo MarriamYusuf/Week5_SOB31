@@ -21,36 +21,34 @@
 
 exam_one = int(input("Input exam grade one: "))
 
-exam_two = input("Input exam grade two: "))
+exam_two = int(input("Input exam grade two: ")) #added int(
 
-exam_3 = str(input("Input exam grade three: "))
+exam_three = int(input("Input exam grade three: ")) #change 3 to three for concistency, change string data type to integer data type
 
-grades = [exam_one exam_two exam_three]
+grades = [exam_one,exam_two, exam_three] # added commas between each element in the list
 sum = 0
-for grade in grade:
+for grade in grades: #change right hand side grade to grades 
   sum = sum + grade
 
-avg = sum / len(grdes)
+avg = sum / len(grades) #spelling error grdes corrected to grades
 
 if avg >= 90:
     letter_grade = "A"
-elif avg >= 80 and avg < 90
+elif avg >= 80 and avg < 90: #added a full colon at the end
     letter_grade = "B"
-elif avg > 69 and avg < 80:
-    letter_grade = "C'
-elif avg <= 69 and avg >= 65:
+elif avg >= 70 and avg < 80: #eddited numbers to fit marking criteria 69 changed to 70 
+    letter_grade = "C" # change "c' to "c" 
+elif avg >= 60 and avg <= 69: # edited <=69 to >=60 and >=65 to <=69 to meet marking criteria 
     letter_grade = "D"
-elif:
+else: # elif statement changed to else
     letter_grade = "F"
 
-for grade in grades:
-    print("Exam: " + str(grade))
+#for grade in grades: remove this line as it makes it print three times and then reindent the print statement
+print("Exam: " + str(grade))
+print("Average: " + str(avg))
+print("Grade: " + letter_grade)
 
-    print("Average: " + str(avg))
-
-    print("Grade: " + letter_grade)
-
-if letter-grade is "F":
-    print "Student is failing."
+if letter_grade == "F": #letter-grade hyphen changed to underscore and the is operator checks if two variables refer to the same object, but == checks if their values are equal.
+    print ("Student is failing.") #added brackets for print statement
 else:
-    print "Student is passing."
+    print ("Student is passing.") #added brackets for print statement
